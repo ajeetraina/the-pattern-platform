@@ -8,7 +8,7 @@ The purpose of this part is NLP pipeline to turn text into knowledge graph ("it'
 
 ```
 git checkout main
-cd conf && launch_cluster_docker.sh
+cd conf && sh launch_cluster_docker.sh
 ```
 
 It will create docker network build and run Redisgraph and Rgcluster in two separate dockers. 
@@ -17,6 +17,8 @@ In another terminal run
 pip install gears-cli
 sh cluster_pipeline.sh
 ```
+
+Ensure that you are under /the-pattern-platform directory  while you execute cluster_pipeline.sh script.
 
 It will populate all steps, submit 25 articles into cluster for processing and run matcher. There are few sleep statements to allow cluster to recover. 
 
